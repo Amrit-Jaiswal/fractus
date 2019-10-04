@@ -1,0 +1,1 @@
+insert into country values(1, 'India');

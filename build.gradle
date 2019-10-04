@@ -1,0 +1,29 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+	group = 'com.example'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = '1.8'
+
+	configurations {
+		developmentOnly
+		runtimeClasspath {
+			extendsFrom developmentOnly
+		}
+	}
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.1.8.RELEASE'
+		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.8.RELEASE'
+		compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.1.8.RELEASE'
+//		compile group: 'com.h2database', name: 'h2', version: '1.4.199'
+	}
+
+
