@@ -1,4 +1,4 @@
-package com.example.fractus;
+package com.db.fractus;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.example.fractus;
+package com.db.fractus;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

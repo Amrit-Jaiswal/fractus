@@ -1,1 +1,3 @@
-insert into country values(1, 'India');
+insert into country(cId, cName)
+values(91, 'India'),
+(49, 'Germany');
