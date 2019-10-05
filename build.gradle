@@ -24,11 +24,7 @@ repositories {
 	mavenCentral()
 }
 
-/*	repositories {
-		mavenCentral()
-	}
-
-	dependencies {
+/*	dependencies {
 		compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.1.8.RELEASE'
 		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.8.RELEASE'
 		compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.1.8.RELEASE'

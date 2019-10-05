@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/fractus/v1")
@@ -25,7 +26,8 @@ public class HomeController {
 
     @GetMapping(value = "/countries/{id}")
     public Country getCountry(@PathVariable("id")String id){
-        return countryService.getCountryById(Integer.parseInt(id));
+        Optional<Country> countryById = countryService.getCountryById(Integer.parseInt(id));
+        return countryById.orElseGet(Country::new);
     }
 
     @GetMapping(value="/countries")

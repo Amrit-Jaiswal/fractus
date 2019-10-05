@@ -12,24 +12,27 @@ public class Country implements Serializable{
 
     @Id
     @Column(name="cid")
-    private int cId;
+    private int id;
 
     @Column(name="cname")
-    private String cName;
+    private String name;
 
-    public int getcId() {
-        return cId;
+    public Country() {
     }
 
-    public void setcId(int cId) {
-        this.cId = cId;
+    public int getId() {
+        return id;
     }
 
-    public String getcName() {
-        return cName;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setcName(String cName) {
-        this.cName = cName;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ICountryRepository extends JpaRepository<Country, Integer> {
-    Country findByCId(Integer id);
 }
