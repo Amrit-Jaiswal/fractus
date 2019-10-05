@@ -15,7 +15,6 @@ import java.util.List;
 @RequestMapping("/fractus/v1")
 public class HomeController {
 
-
     @Autowired
     private CountryService countryService;
 

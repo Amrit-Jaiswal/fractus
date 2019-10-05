@@ -1,4 +1,4 @@
-group 'com.example'
+group 'com.db.fractus'
 version '0.0.1-SNAPSHOT'
 
 apply plugin: 'java'
@@ -9,8 +9,11 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.1.8.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.8.RELEASE'
+    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.1.8.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.1.8.RELEASE'
     compile group: 'com.h2database', name: 'h2', version: '1.4.199'
+    compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+
+
 }

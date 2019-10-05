@@ -1,21 +1,30 @@
-plugins {
-	id 'org.springframework.boot' version '2.1.8.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-	id 'java'
+buildscript {
+	ext {
+		springBootVersion = '2.1.8.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+group 'com.db.fractus'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+bootJar {
+	mainClassName = 'com.db.fractus.FractusApplication'
 }
 
-	group = 'com.example'
-	version = '0.0.1-SNAPSHOT'
-	sourceCompatibility = '1.8'
+repositories {
+	mavenCentral()
+}
 
-	configurations {
-		developmentOnly
-		runtimeClasspath {
-			extendsFrom developmentOnly
-		}
-	}
-
-	repositories {
+/*	repositories {
 		mavenCentral()
 	}
 
@@ -24,6 +33,6 @@ plugins {
 		compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.8.RELEASE'
 		compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.1.8.RELEASE'
 //		compile group: 'com.h2database', name: 'h2', version: '1.4.199'
-	}
+	}*/
 
 

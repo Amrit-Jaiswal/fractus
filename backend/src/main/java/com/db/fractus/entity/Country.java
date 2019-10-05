@@ -1,11 +1,14 @@
 package com.db.fractus.entity;
 
-
-import org.springframework.data.annotation.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
 @Table(name="country")
-public class Country {
+public class Country implements Serializable{
 
     @Id
     @Column(name="cid")
