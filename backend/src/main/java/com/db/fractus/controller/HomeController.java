@@ -3,6 +3,8 @@ package com.db.fractus.controller;
 import com.db.fractus.bean.Employee;
 import com.db.fractus.entity.Country;
 import com.db.fractus.service.CountryService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,13 +16,15 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/fractus/v1")
+@Api(value="Fractus", description="Backend")
 public class HomeController {
 
     @Autowired
     private CountryService countryService;
 
     @GetMapping("/{name}")
-    public String welComeUser(@PathVariable("name")String name){
+    @ApiOperation(value = "welcome user")
+    public String welcomeUser(@PathVariable("name")String name){
         return "Welcome " + name;
     }
 
