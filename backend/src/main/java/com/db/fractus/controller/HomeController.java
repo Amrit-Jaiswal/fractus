@@ -2,7 +2,9 @@ package com.db.fractus.controller;
 
 import com.db.fractus.bean.Employee;
 import com.db.fractus.entity.Country;
+import com.db.fractus.entity.QuestionnaireEntity;
 import com.db.fractus.service.CountryService;
+import com.db.fractus.service.QuestionnaireService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +24,12 @@ public class HomeController {
     @Autowired
     private CountryService countryService;
 
-    @GetMapping("/{name}")
-    @ApiOperation(value = "welcome user")
-    public String welcomeUser(@PathVariable("name")String name){
-        return "Welcome " + name;
+    @Autowired
+    private QuestionnaireService questionnaireService;
+
+    @GetMapping(value="/questionnaires")
+    public List<QuestionnaireEntity> getAllQuestions(){
+        return questionnaireService.getAllQuestions();
     }
 
     @GetMapping(value = "/countries/{id}")
@@ -35,14 +39,14 @@ public class HomeController {
     }
 
     @GetMapping(value="/countries")
-    public List<Country> getAllcountries(){
+    public List<Country> getAllCountries(){
         return countryService.getAllCountry();
     }
 
-    @GetMapping("")
+    /*@GetMapping("")
     public Employee welCome(){
         Employee emp = new Employee();
         emp.setName("Welcome to Fractus");
         return emp;
-    }
+    }*/
 }
